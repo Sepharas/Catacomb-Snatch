@@ -29,7 +29,7 @@ public class Harvester extends Building implements LootCollector {
 	private int emptyingSpeed = 50;
 	public int radius;
 	private int[] upgradeRadius = new int[] { (int) (1.5 * Tile.WIDTH),
-			2 * Tile.WIDTH, (int) (2.5 * Tile.WIDTH) };
+			(int) (2.25 * Tile.WIDTH), (int) (3 * Tile.WIDTH) };
 	private int[] upgradeCapacities = new int[] { 1500, 2500, 3500 };
 	
 	
@@ -49,7 +49,7 @@ public class Harvester extends Building implements LootCollector {
 		freezeTime = 10;
 		yOffs = 20;
 		//TODO should this upgrade cost change with Difficulty like Turret?
-		makeUpgradeableWithCosts(new int[] { 500, 1000, 5000 });
+		makeUpgradeableWithCosts(new int[] { 750, 1250, 5000 });
 		healthBarOffset = 13;
 		areaBitmap = Bitmap.rangeBitmap(radius,RADIUS_COLOR);
 	}
